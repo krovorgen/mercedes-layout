@@ -1,0 +1,6 @@
+/dist
+/src/sass
+*.min.js
+/src/pages
+gulpfile.js
+*.css
