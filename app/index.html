@@ -1,66 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="css/style.min.css" />
-    </head>
 
-    <body>
-        <header class="header">
-            <div class="container">
-                <div class="header__top">
-                    <div class="logo">
-                        <a class="header__link" href="#">
-                            <picture>
-                                <source
-                                    type="image/webp"
-                                    srcset="images/logo.webp"
-                                />
-                                <source
-                                    type="image/png"
-                                    srcset="images/logo.png"
-                                />
-                                <img src="images/logo.png" alt="logo" />
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="header__btn">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-                    </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <div class="logo">
+                    <a class="header__link" href="#">
+                        <picture>
+                            <source type="image/webp" srcset="images/logo.webp" />
+                            <source type="image/png" srcset="images/logo.png" />
+                            <img src="images/logo.png" alt="logo" />
+                        </picture>
+                    </a>
                 </div>
-                <div class="header__content">
-                    <h1 class="header__content-title">Roadster</h1>
-                    <p class="header__content-text">
-                        Самый быстрый автомобиль в мире, с рекордным ускорением,
-                        дальностью и производительностью.
-                    </p>
-                    <a class="header__content-link" href="#">Хочу тест драйв</a>
+                <div class="header__btn">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
                 </div>
             </div>
-        </header>
-        <section class="slider__top">
-            <div class="slider">
-                <div
-                    class="slider__item"
-                    style="background-image: url('images/slider/slider-1.jpg')"
-                ></div>
-                <div
-                    class="slider__item"
-                    style="background-image: url('images/slider/slider-2.jpg')"
-                ></div>
-                <div
-                    class="slider__item"
-                    style="background-image: url('images/slider/slider-3.jpg')"
-                ></div>
+            <div class="header__content">
+                <h1 class="header__content-title">Roadster</h1>
+                <p class="header__content-text">
+                    Самый быстрый автомобиль в мире, с рекордным ускорением,
+                    дальностью и производительностью.
+                </p>
+                <a class="header__content-link" href="#">Хочу тест драйв</a>
             </div>
-        </section>
+        </div>
+    </header>
+    <section class="slider__top">
+        <div class="slider">
+            <div class="slider__item" style="background-image: url('images/slider/slider-1.jpg')"></div>
+            <div class="slider__item" style="background-image: url('images/slider/slider-2.jpg')"></div>
+            <div class="slider__item" style="background-image: url('images/slider/slider-3.jpg')"></div>
+        </div>
+    </section>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-        <script src="js/main.min.js"></script>
-    </body>
+    <section class="specification">
+        <div class="container">
+            <div class="specification__innerr">
+                <div class="specification__item">
+                    <h3 class="specification__item-title">Двигатель</h3>
+                    <div class="specification__item-num"><span>2,1</span> сек</div>
+                    <div class="specification__item-descr">разгон до 100 км</div>
+                </div>
+                <div class="specification__item">
+                    <h3 class="specification__item-title">Батарея</h3>
+                    <div class="specification__item-num"><span>1000</span> км</div>
+                    <div class="specification__item-descr">запас хода</div>
+                </div>
+                <div class="specification__item">
+                    <h3 class="specification__item-title">Скорость</h3>
+                    <div class="specification__item-num"><span>400</span> км/ч</div>
+                    <div class="specification__item-descr">макс скорость</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
 </html>
