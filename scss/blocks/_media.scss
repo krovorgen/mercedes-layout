@@ -1,0 +1,198 @@
+// X-Large devices (large desktops, less than 1400px)
+/* @media (max-width: 1399.98px) {} */
+
+// Large devices (desktops, less than 1200px)
+/* @media (max-width: 1199.98px) {} */
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .slider {
+        &__item-1 {
+            background: 80%/cover;
+        }
+    }
+
+    .design {
+        &__images {
+            margin-bottom: 15px;
+        }
+
+        &__content {
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            width: 100%;
+        }
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    body {
+        font-size: 20px;
+        line-height: 120%;
+    }
+
+    .specification {
+        margin-top: 50px;
+
+        span {
+            font-size: 84px;
+            line-height: 120%;
+        }
+    }
+
+    .presentation {
+        margin-top: 50px;
+    }
+
+    .about {
+        margin-top: 50px;
+
+        &__item {
+            display: block;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        &__content {
+            width: 100%;
+        }
+
+        &__content-title:nth-child(1) {
+            margin-bottom: 15px;
+        }
+
+        &__content-title:nth-child(2) {
+            text-align: center;
+        }
+
+        &__content-descr:nth-child(2) {
+            margin: 0 auto 10px;
+            width: 50%;
+        }
+
+        &__content-descr:nth-child(1) {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        &__images {
+            width: 100%;
+            height: auto;
+        }
+
+        &__item--mobile {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        &__content--mobile {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    .footer {
+        padding: 30px 0 20px;
+
+        &__btn {
+            margin-bottom: 28px;
+            text-align: center;
+        }
+    }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .header {
+        text-align: center;
+
+        &__top {
+            flex-direction: column-reverse;
+        }
+
+        &__content-title {
+            font-size: 47px;
+            line-height: 120%;
+        }
+
+        &__content-text {
+            margin: 0 auto;
+            margin-bottom: 25px;
+        }
+
+        &__btn {
+            margin-left: auto;
+        }
+    }
+
+    .content-link {
+        padding: 23px 49px;
+    }
+
+    .menu__list a {
+        min-width: 269px;
+        font-size: 33px;
+        line-height: 120%;
+    }
+
+    .slider {
+        &__item-1 {
+            background: 90%/cover;
+        }
+
+        &__item-2 {
+            background: 27%/cover;
+        }
+
+        &__item-3 {
+            background: 25%/cover;
+        }
+    }
+
+    .specification {
+        margin-top: 50px;
+
+        &__inner {
+            display: block;
+        }
+
+        &__item {
+            margin-bottom: 30px;
+        }
+
+        &__item-title {
+            margin-bottom: 0;
+        }
+
+        &__item-num {
+            margin-bottom: 0;
+        }
+    }
+
+    .presentation {
+        &__images {
+            height: auto;
+        }
+
+        &__images-img {
+            width: 100%;
+            height: 50%;
+        }
+    }
+
+    .about {
+        &__content-descr:nth-child(2) {
+            margin: 0 auto 10px;
+            width: 75%;
+        }
+    }
+
+    .design {
+        &__item-descr {
+            padding-left: 35px;
+        }
+    }
+}
