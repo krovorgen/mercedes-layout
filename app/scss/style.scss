@@ -30,10 +30,10 @@ a {
     position: absolute;
     left: 0;
     right: 0;
-    z-index: 5;
+    z-index: 7;
     padding-top: 30px;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
 
     &__top {
         display: flex;
@@ -42,6 +42,7 @@ a {
     }
 
     &__btn {
+        z-index: 13;
         cursor: pointer;
     }
 
@@ -94,25 +95,74 @@ a {
         width: 284px;
     }
 
-    &__content-link {
+    &__btn.is-active .line:nth-child(1),
+    &__btn.is-active .line:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+}
+
+.container__menu {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: $black-background;
+    transform: translateX(-200%);
+    transition: all 0.5s;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+
+    &__list ul {
+        list-style: none;
+    }
+
+    &__list a {
         display: inline-block;
-        border: 1px solid #fff;
-        padding: 30px 62px;
-        background: rgba(#fff, 0.15);
+        border-bottom: 3px solid $red-text;
+        padding: 30px 25px 14px 0;
+        min-width: 368px;
+        font-size: 48px;
+        line-height: 56px;
         transition: all 0.5s;
 
         @extend %roboto-condensed-bold;
     }
 
-    &__content-link:hover {
-        background-color: $red-background;
-        transition: all 0.5s;
+    &__list a:hover {
+        margin-left: 32px;
+        border-color: $white-text;
+        transform: scale(1.2);
+        transition: transform border-color 0.5s;
     }
 
-    &__btn.is-active .line:nth-child(1),
-    &__btn.is-active .line:nth-child(3) {
-        transition-delay: 0.3s;
+    &--active {
+        transform: translateX(0%);
+        transition: all 0.5s;
     }
+}
+
+.content-link {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 30px 62px;
+    background: rgba(#fff, 0.15);
+    transition: all 0.5s;
+
+    @extend %roboto-condensed-bold;
+}
+
+.content-link:hover {
+    background-color: $red-background;
+    transition: all 0.5s;
 }
 
 .slider {
@@ -122,35 +172,172 @@ a {
         background-size: cover;
         background-repeat: no-repeat;
     }
-
-    .slick-dots button {
-        outline: none;
-        border: none;
-        border-radius: 50%;
-        padding: 0;
-        width: 15px;
-        height: 15px;
-        font-size: 0;
-        background-color: $black-background;
-    }
-
-    .slick-dots .slick-active button {
-        background-color: $white-text;
-    }
-
-    .slick-dots li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    .slick-dots {
-        position: relative;
-        z-index: 6;
-        margin: -55px auto 0;
-        max-width: 1200px;
-    }
-
-    /* &__top {
-        position: relative;
-    } */
 }
+
+.specification {
+    margin-top: 100px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    span {
+        font-size: 96px;
+        line-height: 112px;
+
+        @extend %roboto-regular;
+    }
+
+    &__item-title {
+        margin-bottom: 20px;
+    }
+
+    &__item-num {
+        margin-bottom: 7px;
+    }
+
+    &__item-descr {
+        color: $red-text;
+    }
+}
+
+.presentation {
+    margin-top: 100px;
+
+    &__images {
+        margin: 0 auto;
+        width: 100%;
+        height: 400px;
+    }
+
+    &__images-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.about {
+    margin-top: 100px;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+
+    &__content {
+        width: 48%;
+    }
+
+    &__content-title {
+        font-size: 36px;
+        line-height: 42px;
+        color: $red-text;
+
+        &:nth-child(1) {
+            margin-bottom: 100px;
+        }
+
+        &:nth-child(2) {
+            text-align: right;
+        }
+    }
+
+    &__content-descr {
+        &:nth-child(1) {
+            margin-top: 94px;
+            margin-bottom: 40px;
+        }
+
+        &:nth-child(2) {
+            width: 303px;
+        }
+    }
+
+    &__images {
+        width: 48%;
+        height: 400px;
+    }
+
+    &__images-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.design {
+    margin-bottom: 100px;
+
+    &__images {
+        margin: 0 auto;
+        margin-bottom: 100px;
+        width: 100%;
+        max-height: 600px;
+    }
+
+    &__images-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 48%;
+    }
+
+    &__item-num {
+        margin-bottom: 10px;
+        color: $red-text;
+    }
+
+    &__item-descr {
+        padding-left: 105px;
+    }
+}
+
+.footer {
+    padding: 83px 0 20px;
+    background-color: $red-background;
+
+    &__btn {
+        margin-bottom: 83px;
+        text-align: center;
+    }
+
+    &__copy {
+        text-align: center;
+
+        @extend %roboto-condensed-bold;
+    }
+
+    &__copy ul {
+        list-style: none;
+    }
+
+    &__copy a {
+        color: $white-text;
+    }
+
+    &__copy li {
+        position: relative;
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    &__copy li + li::before {
+        content: "|";
+        position: absolute;
+        left: -5px;
+    }
+}
+
+@import "blocks/media";
