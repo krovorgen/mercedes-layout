@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mercedes</title>
+        <meta name="title" content="AMG GT 63 S" />
+        <meta name="description" content="Самый быстрый автомобиль в мире, с рекордным ускорением и производительностью." />
     <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__top">
+            <div class="header__top animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="0.2s">
                 <div class="logo">
                     <a class="header__link" href="#">
                         <picture>
@@ -30,7 +32,7 @@
                     <span class="line"></span>
                 </div>
             </div>
-            <div class="header__content">
+            <div class="header__content animate__animated animate__fadeIn wow" data-wow-duration="3s" data-wow-delay="0.8s">
                 <h1 class="header__content-title">AMG GT 63 S</h1>
                 <p class="header__content-text">
                     Самый быстрый автомобиль в мире, с рекордным ускорением и производительностью.
@@ -86,7 +88,11 @@
     <section class="presentation">
         <div class="container">
             <div class="presentation__images">
-                <img class="presentation__images-img" src="images/specification.jpg" alt="car">
+                <picture>
+                    <source srcset="images/specification.webp" type="image/webp">
+                    <source srcset="images/specification.jpg" type="image/jpeg">
+                    <img class="presentation__images-img" src="images/specification.jpg" alt="car">
+                </picture>
             </div>
         </div>
     </section>
@@ -95,7 +101,7 @@
         <div class="container">
 
             <div class="about__item">
-                <div class="about__content">
+                <div class="about__content animate__animated animate__fadeIn wow" data-wow-duration="3s" data-wow-delay="0.8s">
                     <div class="about__content-title">Скорость</div>
                     <div class="about__content-descr">
                         Самый
@@ -104,7 +110,7 @@
                         из когда-либо созданных
                     </div>
                 </div>
-                <div class="about__images">
+                <div class="about__images animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="0.2s">
                     <picture>
                         <source srcset="images/speed.webp" type="image/webp">
                         <source srcset="images/speed.jpg" type="image/jpeg">
@@ -114,10 +120,14 @@
             </div>
 
             <div class="about__item about__item--mobile">
-                <div class="about__images">
-                    <img class="about__images-img" src="images/benefits.jpg " alt="car">
+                <div class="about__images animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <picture>
+                        <source srcset="images/benefits.webp" type="image/webp">
+                        <source srcset="images/benefits.jpg" type="image/jpeg">
+                        <img class="about__images-img" src="images/benefits.jpg" alt="car">
+                    </picture>
                 </div>
-                <div class="about__content about__content--mobile">
+                <div class="about__content about__content--mobile animate__animated animate__fadeIn wow" data-wow-duration="3s" data-wow-delay="0.8s">
                     <div class="about__content-descr">
                         Датчик дождя <br>
                         Датчик света<br>
@@ -137,10 +147,14 @@
 
     <section class="design">
         <div class="container">
-            <div class="design__images">
-                <img class="design__images-img" src="images/about.jpg" alt="">
+            <div class="design__images animate__animated animate__fadeIn wow" data-wow-duration="2s" data-wow-delay="0.2s">
+                <picture>
+                    <source srcset="images/about.webp" type="image/webp">
+                    <source srcset="images/about.jpg" type="image/jpeg">
+                    <img class="design__images-img" src="images/about.jpg" alt="about">
+                </picture>
             </div>
-            <div class="design__content">
+            <div class="design__content animate__animated animate__fadeIn wow" data-wow-duration="3s" data-wow-delay="0.5s">
 
                 <div class="design__item">
                     <div class="design__item-num">01</div>
@@ -183,6 +197,12 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
